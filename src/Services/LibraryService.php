@@ -19,9 +19,10 @@ class LibraryService implements Searchable, Manageable {
 
     // Adds a new resource to the library.
     public function add($item): void {
-        $this->resources[] = $item->getDetails(); // Add the item's details to the resources array
-        $this->persistence->write($this->resources); // Save the updated resources to storage
+        $this->resources[] = $item->getDetails(); 
+        $this->persistence->write($this->resources);
     }
+    
 
     // Deletes a resource by its ID.
     public function delete($id): void {

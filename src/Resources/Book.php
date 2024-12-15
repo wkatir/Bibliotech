@@ -6,12 +6,14 @@ namespace Wilmer\Bibliotech\Resources;
 class Book extends Resource {
     private $author; // Author of the book
     private $category; // Category of the book
+    private $image; // Image as a URL
 
     // Constructor: Initializes the book with ID, title, author, and category.
-    public function __construct($id, $title, $author, $category) {
+    public function __construct($id, $title, $author, $category, $image = null) {
         parent::__construct($id, $title); // Calls the constructor of the parent Resource class
         $this->author = $author;
         $this->category = $category;
+        $this->image = $image;
     }
 
     // Returns the details of the book as an array.
@@ -21,6 +23,7 @@ class Book extends Resource {
             'title' => $this->title,
             'author' => $this->author,
             'category' => $this->category,
+            'image' => $this->image,
         ];
     }
 }

@@ -1,80 +1,120 @@
-/* Mini CSS Reset */
+/* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
-    background-color: #f4f4f9;
-    color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #f4f4f9;
+  color: #333;
 }
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+h1, h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #4a9c8e; 
 }
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th {
-    background-color: #f4f4f4;
-    padding: 10px;
-    text-align: left;
-}
-
-td {
-    padding: 10px;
-}
-
-/* Form Styles */
 form {
-    margin-bottom: 20px;
-    background: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+input, button, a {
+  font-family: inherit;
+}
+input[type="text"], input[type="url"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  padding: 10px 20px;
+  background: #8ad1c0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #6bb3a3; 
+}
+.error {
+  margin: 15px auto;
+  padding: 10px;
+  background: #ffdddd;
+  color: #d8000c;
+  border: 1px solid #d8000c;
+  border-radius: 4px;
 }
 
-form input, form button {
-    padding: 10px;
-    margin: 5px 0;
-    width: calc(100% - 22px);
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+th {
+  background: #8ad1c0;
+  color: #fff;
+}
+td img {
+  display: block;
+  max-width: 50px;
+  height: auto;
+  border-radius: 4px;
 }
 
-form button {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
+/* Responsive design */
+@media (max-width: 768px) {
+  table, th, td {
+      display: block;
+      width: 100%;
+  }
+  tr {
+      margin-bottom: 10px;
+  }
+  th {
+      display: none;
+  }
+  td {
+      border: none;
+      padding: 10px;
+      position: relative;
+  }
+  td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+  }
+  form.inline-form {
+      display: block;
+  }
 }
 
-form button:hover {
-    background-color: #45a049;
+/* Utility styles */
+.inline-form {
+  display: inline-block;
+  margin-right: 5px;
 }
-
-/* Links */
-a.delete-link {
-    color: #d9534f;
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    background-color: #f8d7da;
-    font-size: 0.9em;
+a {
+  color: #4a9c8e; /* Link color matching the theme */
+  text-decoration: none;
 }
-
-a.delete-link:hover {
-    background-color: #f5c6cb;
-    border-color: #f1b0b7;
+a:hover {
+  text-decoration: underline;
 }
