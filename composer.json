@@ -1,0 +1,13 @@
+{
+    "name": "wilmer/bibliotech",
+    "description": "Book management in PHP with JSON",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wilmer\\Bibliotech\\": "src/"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
